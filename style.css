@@ -99,7 +99,7 @@ https://en.bem.info/methodology/quick-start/*/
 .menu__list__item{
     margin: 10px;
     /*transform: rotateY(0deg) rotate(-15deg); /* needs Y at 0 deg to behave properly*/
-    transition: transform 2s;*/
+    transition: transform 2s;
     
  
 }
@@ -155,50 +155,65 @@ section.about{
     margin-left:35px;
 }
 
+
+
 /*Sección skills*/
-.skills{
+section.skills{
     margin-top: 30px;
     display:flex;
     flex-direction:column;
-    justify-content:center; 
     align-items:center;
- 
 }
 
 
 .skills__line{
+    width: 100%;
     display:flex; 
     flex-direction:row;
-   
+    justify-content:space-around;
+    align-items:baseline;
     
 }
 
-
-.skills__box{
-    padding: 0 40px 0 40px;
+.skills__box ul{
+    display:box;
+    padding:0px;
+    margin:0px;
+    text-align: center;
 }
+
+
+
+
+
 /*Sección Hobbies*/
 
 section.hobbies{
     margin-top: 30px;
     display:flex;
     flex-direction:column;
-    justify-content:center; 
     align-items:center;
-    
 }
 
 .hobbies__line{
+    width: 100%;
     display:flex; 
     flex-direction:row;
-}
-.hobbies__box{
-    padding: 0 40px 0 40px;
-
-    display:flex;
-    align-items:center;
+    justify-content:space-around;
+    align-items:baseline;
+ 
 
 }
+.hobbies__box  ul{
+    display:box;
+    padding:0px;
+    margin:0px;
+    text-align: center;
+
+}
+
+
+
 
 /* Experiencia Académica*/
 
@@ -278,6 +293,7 @@ section.experience{
     display:flex;
     flex-direction:row-reverse;
     align-items:center;
+    margin: 10px;
     
 }
 
@@ -287,6 +303,10 @@ section.experience{
     display:flex;
     flex-direction:row;
     align-items:center;
+    margin: 10px;
+    
+    
+
     
 }
 
@@ -296,6 +316,8 @@ section.experience{
     display:flex;
     flex-direction:row-reverse;
     align-items:center;
+    margin: 10px;
+    
     
 }
 
@@ -304,6 +326,7 @@ section.experience{
 
     align-items:center;
     margin-left: 10px;
+    
     
 }
 
@@ -402,7 +425,7 @@ Utiliza las referencias de los breakpoints @media abajo */
         @media only screen and (min-width: 360px) and (max-width: 800px){
     
         body {
-            
+            background-color: var(--cor-de-fundo) ;
         }
 
         /* Menú */
@@ -460,27 +483,78 @@ Utiliza las referencias de los breakpoints @media abajo */
 
         /*Skills*/
 
-        .skills__line{
+        section.skills{
+            margin-top: 30px;
             display:flex;
-            flex-wrap:wrap;
-            justify-content:flex-start; 
-            align-items:center; 
+            flex-direction:column;
+            align-items:center;
         }
 
-        .hobbies__line{
-            display:flex;
+
+        .skills__line{
+            width: 100%;
+            display:flex; 
+            flex-direction:row;
+
+            justify-content:space-around;
             flex-wrap:wrap;
-            justify-content:flex-start; 
-            align-items:center; 
+            align-items:baseline;
+            
+        }
+
+        .skills__box ul{
+            display:box;
+            padding:0px;
+            margin:0px;
+            text-align: center;
+   
+
         }
 
 
         .formcontato__img{
             display:none;
-
         }
 
         /*Hobbies*/
+
+
+
+
+
+        section.hobbies{
+            margin-top: 30px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+
+
+        /*.hobbies__line{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:flex-start; 
+            align-items:center; 
+        }*/
+        
+        .hobbies__line{
+            width: 100%;
+            display:flex; 
+            flex-direction:row;
+            justify-content:space-around;
+            align-items:baseline;
+         
+        
+        }
+        .hobbies__box  ul{
+            display:box;
+            padding:0px;
+            margin:0px;
+            text-align: center;
+       
+        
+        }
+        
 
         /*Formación Académica*/
         .form__img{
@@ -488,6 +562,20 @@ Utiliza las referencias de los breakpoints @media abajo */
             height:80%;
     
         }
+
+        .academic__courses{
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+
+        }
+
+        .academic__courses__box ul{
+
+            display:block;
+
+        }
+        
 
 
         /*Experiencia Profesional*/
@@ -557,7 +645,7 @@ Utiliza las referencias de los breakpoints @media abajo */
         font-family: 'Raleway';
         margin:0;
         padding: 0;
-        
+
 
 
     }
